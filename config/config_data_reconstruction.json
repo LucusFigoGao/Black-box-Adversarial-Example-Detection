@@ -1,0 +1,20 @@
+{
+    "kwargs": {
+        "epochs": 50, 
+        "gpuid": "4", 
+        "dataset": "cifar", 
+        "workers": 4, 
+        "batch_size": 128, 
+        "net_state": "normal", 
+        "net_type": "resnet18", 
+        "outf": "checkpoint", 
+        "criterion": "ce", 
+        "optimizer": "sgd",
+        "lr": 0.01, 
+        "momentum": 0.9, 
+        "decay": 1e-4, 
+        "scheduler": "steplr", 
+        "step_size": 20, 
+        "gamma": 0.1
+    }
+}

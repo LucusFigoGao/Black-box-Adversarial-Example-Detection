@@ -1,0 +1,54 @@
+{
+    "kwargs": {
+        "gpuid": "0",
+        "framework": "frd",
+        "freqvae": "phase",
+        "version": "base", 
+        "layer": ["layer2", "layer3", "layer4"],
+        "seed": 888,
+        "victim_model": [
+            ["normal", "resnet18"]
+        ],
+        "hacker_model": [
+            ["normal", "resnet18"], 
+            ["adver", "resnet18"], 
+            ["normal", "vgg16"], 
+            ["normal", "wideresnet28"], 
+            ["normal", "ensemble"], 
+            ["adver", "ensemble"]
+        ],
+        "attack_train": [
+            ["fgsm", "l2", 0.01],
+            ["bim", "l2", 0.01],
+            ["pgd", "l2", 1.0],
+            ["pgd", "linf", 8],
+            ["deepfool", "l2", 0.5],
+            ["cw", "l2", 0.5]
+        ],
+        "attack_test": [
+            ["fgsm", "l2", 0.01],
+            ["bim", "l2", 0.01],
+            ["pgd", "l2", 1.0],
+            ["pgd", "linf", 8],
+            ["deepfool", "l2", 0.5],
+            ["cw", "l2", 0.5]
+        ],
+        "fae": "None",
+        "fce": "None",
+        "fne": "None",
+        "flabel": "None",
+        "fae_test": "None",
+        "fce_test": "None",
+        "fne_test": "None",
+        "flabel_test": "None",
+        "workers": 0,
+        "dataset": "cifar",
+        "num_classes": 10, 
+        "batch_size": 128,
+        "outf": "./record-cifar/frd_pha",
+        "TSR": 0.7,
+        "TB": 640,
+        "print_freq": 1,
+        "retrain": "False"
+    }
+}

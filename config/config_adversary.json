@@ -1,0 +1,27 @@
+{
+    "kwargs": {
+        "seed": 666, 
+        "gpuid": "0", 
+        "victim_model": [
+            ["normal", "resnet18"]
+        ], 
+        "hacker_model": [
+            ["normal", "resnet18"], 
+            ["adver", "resnet18"], 
+            ["normal", "vgg16"], 
+            ["normal", "wideresnet28"], 
+            ["normal", "ensemble"], 
+            ["adver", "ensemble"]
+        ], 
+        "attack": [
+            ["pgd", "linf", 8], 
+            ["pgd", "l2", 1.0], 
+            ["fgsm", "l2", 0.01], 
+            ["bim", "l2", 0.01], 
+            ["deepfool", "l2", 0.5], 
+            ["cw", "l2", 0.5]
+        ], 
+        "dataset": "cifar", 
+        "outf": "dataset"
+    }
+}

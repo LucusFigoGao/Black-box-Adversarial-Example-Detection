@@ -1,0 +1,24 @@
+{
+    "kwargs": {
+        "exp_name": "None", 
+        "dataset": "cifar100", 
+        "cuda_index": "0", 
+        "arch": "wideresnet28", 
+        "batch_size": 100, 
+        "workers": 8, 
+        "data_aug": 1, 
+        "out_dir": "./checkpoint", 
+        "epochs": 200, 
+        "lr": 0.1, 
+        "weight_decay": 5e-4, 
+        "momentum": 0.9, 
+        "lr_interpolation": "step", 
+        "custom_lr_multiplier": "[(50, 0.1), (100, 0.1), (150, 0.1)]", 
+        "step_lr": 50, 
+        "step_lr_gamma": 0.1, 
+        "resume": "normal-mini_cifar_v2", 
+        "adv_train": 0, 
+        "adv_eval": 0, 
+        "state": "adver"
+    }
+}

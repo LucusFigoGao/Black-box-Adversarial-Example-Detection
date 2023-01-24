@@ -1,0 +1,46 @@
+{
+    "kwargs": {
+        "gpuid": "0",
+        "framework": "md", 
+        "seed": [666], 
+        "victim_model": [
+            ["normal", "resnet18"]
+        ],
+      "hacker_model": [
+            ["normal", "resnet18"], 
+            ["adver", "resnet18"], 
+            ["normal", "vgg16"], 
+            ["normal", "wideresnet28"], 
+            [ "normal", "ensemble" ],
+            [ "adver", "ensemble" ]
+      ], 
+        "attack_train": [
+            [ "fgsm", "l2", 0.01 ],
+            [ "bim", "l2", 0.01 ],
+            [ "pgd", "l2", 1.0 ],
+            [ "pgd", "linf", 8 ],
+            [ "deepfool", "l2", 0.5 ],
+            [ "cw", "l2", 0.5 ]
+        ], 
+        "attack_test": [
+            [ "fgsm", "l2", 0.01 ],
+            [ "bim", "l2", 0.01 ],
+            [ "pgd", "l2", 1.0 ],
+            [ "pgd", "linf", 8 ],
+            [ "deepfool", "l2", 0.5 ],
+            [ "cw", "l2", 0.5 ]
+        ], 
+        "fae": "None", 
+        "fce": "None", 
+        "fne": "None", 
+        "flabel": "None", 
+        "fae_test": "None", 
+        "fce_test": "None", 
+        "fne_test": "None", 
+        "flabel_test": "None", 
+        "workers": 0,  
+        "dataset": "cifar", 
+        "batch_size": 128, 
+        "outf": "record/md"
+    }
+}
